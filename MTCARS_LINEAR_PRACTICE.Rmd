@@ -1,0 +1,28 @@
+---
+title: "MTCARS Linear Regression Practice"
+output: Linear Models
+name: Ethan Gueck
+date: 10.20.23
+---
+
+```{r}
+library(tidyverse) 
+library(datasets)
+data("mtcars")
+```
+
+```{r}
+mtcars
+```
+Create Model 1. 
+```{r}
+mod1 <- lm(data = mtcars, mpg ~ wt + gear) 
+summary(mod1)
+```
+Create Model 2.
+```{r}
+mod2 <- lm(data = mtcars, mpg ~ wt + vs) 
+summary(mod2)
+```
+Compare the two models. 
+Model 2 appears to be a better fit model however because vs is a less signifficant predictor, It may be better to exclude vs as an independent variable. 
